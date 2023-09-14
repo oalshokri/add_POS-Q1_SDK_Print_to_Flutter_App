@@ -11,11 +11,12 @@ import io.flutter.embedding.android.FlutterActivity;
 
 import androidx.annotation.NonNull;
 
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.plugin.common.MethodChannel;
+
 import com.iposprinter.iposprinterservice.IPosPrinterCallback;
 import com.iposprinter.iposprinterservice.IPosPrinterService;
 
-import io.flutter.embedding.engine.FlutterEngine;
-import io.flutter.plugin.common.MethodChannel;
 
 public class MainActivity extends FlutterActivity {
     private static final String CHANNEL = "samples.flutter.dev/q1Printer";
@@ -26,7 +27,7 @@ public class MainActivity extends FlutterActivity {
     private int printerStatus = 0;
     private final int PRINTER_NORMAL = 0;
 
-    @Override
+
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
         new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)

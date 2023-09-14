@@ -49,6 +49,11 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
 }
 
 flutter {

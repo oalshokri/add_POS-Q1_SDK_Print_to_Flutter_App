@@ -5,6 +5,7 @@
 */
 
 package com.iposprinter.iposprinterservice;
+
 import  com.iposprinter.iposprinterservice.IPosPrinterCallback;
 import  android.graphics.Bitmap;
 
